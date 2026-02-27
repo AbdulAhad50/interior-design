@@ -3,10 +3,11 @@ import React, { useRef } from 'react'
 import Card from './Card'
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
 import { Swiper, SwiperSlide } from 'swiper/react'
+import type { Swiper as SwiperType } from 'swiper'
 import 'swiper/css'
 
 const Service = () => {
-  const swiperRef = useRef(null)
+  const swiperRef = useRef<SwiperType | null>(null)
 
   return (
     <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[50px] py-16">
