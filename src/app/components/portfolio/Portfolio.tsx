@@ -23,7 +23,7 @@ const Portfolio = () => {
       viewport={{ once: true }}
       variants={stagger}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
         {/* Column 1 */}
         <motion.div className="flex flex-col gap-6" variants={fadeUp}>
@@ -37,20 +37,20 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+          <div className="relative w-full h-full overflow-hidden rounded-lg">
             <motion.div whileHover={{ scale: 1.05 }} className="w-full h-full">
               <Image
                 src="/assets/portfolio/card_4.jpg"
                 alt=""
                 fill
-                className="object-cover h-[150%]"
+                className="object-cover !relative"
               />
             </motion.div>
           </div>
         </motion.div>
 
         {/* Column 2 */}
-        <motion.div className="flex flex-col gap-6" variants={fadeUp}>
+        <motion.div className="flex flex-col gap-4" variants={fadeUp}>
           {["/assets/portfolio/card_1.jpg", "/assets/portfolio/card_3.jpg"].map((src, i) => (
             <div key={i} className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
               <motion.div whileHover={{ scale: 1.05 }} className="w-full h-full">
@@ -66,7 +66,7 @@ const Portfolio = () => {
         </motion.div>
 
         {/* Column 3 */}
-        <motion.div className="flex flex-col gap-6 justify-between" variants={fadeUp}>
+        <motion.div className="flex flex-col gap-4 justify-between" variants={fadeUp}>
           <div className="relative w-full aspect-[3/4] overflow-hidden rounded-lg">
             <motion.div whileHover={{ scale: 1.05 }} className="w-full h-full">
               <Image
