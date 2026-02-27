@@ -1,49 +1,61 @@
+'use client'
+
 import React from 'react'
 import Cards from './Cards'
 import { FaArrowRight } from 'react-icons/fa6'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { motion } from "framer-motion"
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 }
+}
+
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } }
+}
 
 const Process = () => {
   return (
-    <section className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[50px] py-16">
+    <motion.section
+      className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[50px] py-4"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={stagger}
+    >
 
       {/* Heading */}
-      <div className="mb-12">
+      <motion.div className="mb-12" variants={fadeUp}>
         <h2 className="text-3xl sm:text-4xl font-semibold">
           Effortless Process,
         </h2>
         <h2 className="text-3xl sm:text-4xl font-semibold">
           Continuous Supply
         </h2>
-      </div>
+      </motion.div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Cards
-          card_no="01"
-          title="Choose a Plan"
-          description="Select the flexible or premium plan that suits your business needs."
-        />
-        <Cards
-          card_no="02"
-          title="Subscribe Instantly"
-          description="Activate your subscription with just a click — no forms, no hassle."
-        />
-        <Cards
-          card_no="03"
-          title="Get Tailored Solution"
-          description="Receive personalized products tailored for your operations."
-        />
-        <Cards
-          card_no="04"
-          title="Receive Your Supply"
-          description="Sit back as your supplies are delivered on time, every time."
-        />
-      </div>
+      <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" variants={stagger}>
+        {[
+          ["01", "Choose a Plan", "Select the flexible or premium plan that suits your business needs."],
+          ["02", "Subscribe Instantly", "Activate your subscription with just a click — no forms, no hassle."],
+          ["03", "Get Tailored Solution", "Receive personalized products tailored for your operations."],
+          ["04", "Receive Your Supply", "Sit back as your supplies are delivered on time, every time."]
+        ].map(([no, title, desc], i) => (
+          <motion.div key={i} variants={fadeUp} transition={{ duration: 0.5 }}>
+            <Cards card_no={no} title={title} description={desc} />
+          </motion.div>
+        ))}
+      </motion.div>
 
       {/* CTA Bar */}
-      <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 bg-[#dfdfdf4f] border border-gray-400 rounded-2xl px-6 py-5">
-
+      <motion.div
+        className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 bg-[#dfdfdf4f] border border-gray-400 rounded-2xl px-6 py-5"
+        variants={fadeUp}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
         <div className="flex items-center gap-4">
           <div className="flex -space-x-2">
             <Avatar>
@@ -75,9 +87,9 @@ const Process = () => {
           </button>
           <span className="text-white pr-4">Start Now</span>
         </div>
+      </motion.div>
 
-      </div>
-    </section>
+    </motion.section>
   )
 }
 
