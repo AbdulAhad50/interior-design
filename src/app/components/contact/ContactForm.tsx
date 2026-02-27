@@ -84,7 +84,7 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="Your full name"
             required
-            className="w-full rounded-lg bg-[#f2f2f2] px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black"
+            className="w-full rounded-lg bg-[#f2f2f2] px-4 py-3 text-sm outline-none focus:outline-none"
           />
           <input
             name="email"
@@ -93,7 +93,7 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="Your email address"
             required
-            className="w-full rounded-lg bg-[#f2f2f2] px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black"
+            className="w-full rounded-lg bg-[#f2f2f2] px-4 py-3 text-sm outline-none focus:outline-none"
           />
         </div>
 
@@ -105,7 +105,7 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="Phone Number"
             required
-            className="w-full rounded-lg bg-[#f2f2f2] px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black"
+            className="w-full rounded-lg bg-[#f2f2f2] px-4 py-3 text-sm outline-none focus:outline-none"
           />
           <input
             name="business"
@@ -114,7 +114,7 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="Business Name"
             required
-            className="w-full rounded-lg bg-[#f2f2f2] px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black"
+            className="w-full rounded-lg bg-[#f2f2f2] px-4 py-3 text-sm outline-none focus:outline-none"
           />
         </div>
 
@@ -124,7 +124,7 @@ export default function ContactForm() {
           onChange={handleChange}
           placeholder="Write something..."
           required
-          className="w-full min-h-[180px] resize-none rounded-lg bg-[#f2f2f2] px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black"
+          className="w-full min-h-[180px] resize-none rounded-lg bg-[#f2f2f2] px-4 py-3 text-sm outline-none focus:outline-none"
         />
 
         <button
