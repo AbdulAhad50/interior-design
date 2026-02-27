@@ -12,6 +12,8 @@ export default function ContactForm() {
     name: "",
     email: "",
     message: "",
+    phone : "",
+    business:""
   });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
