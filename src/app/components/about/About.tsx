@@ -10,9 +10,9 @@ const About = () => {
               About Company
             </h2>
             <p className="mt-4 text-gray-700 text-sm sm:text-base leading-relaxed">
-              At Apex Architechs, we believe that architecture is more than just
+              {`At Apex Architechs, we believe that architecture is more than just
               buildings; it's about creating environments that enhance human
-              experience.
+              experience.`}
             </p>
           </div>
 

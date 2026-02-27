@@ -46,25 +46,23 @@ export default function Footer() {
           <div className="w-full sm:w-1/2 lg:w-1/4 px-4 mb-8">
             <h4 className="text-white text-3xl mt-2">Social links</h4>
             <div className="flex gap-3 mt-8">
-              <SocialIcon icon={<FaFacebookF />} />
-              <SocialIcon icon={<FaTwitter />} />
-              <SocialIcon icon={<FaInstagram />} />
-              <SocialIcon icon={<FaLinkedinIn />} />
+
+                <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 text-white transition hover:bg-white hover:text-[#24262b]">
+                <FaFacebookF />
+              </a>
+                <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 text-white transition hover:bg-white hover:text-[#24262b]">
+                <FaTwitter />
+              </a>
+                <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 text-white transition hover:bg-white hover:text-[#24262b]">
+                <FaInstagram />
+              </a>
+                <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 text-white transition hover:bg-white hover:text-[#24262b]">
+                <FaLinkedinIn />
+              </a>
             </div>
           </div>
         </div>
       </div>
     </footer>
-  );
-}
-
-function SocialIcon({ icon }:{icon:string | unknown}) {
-  return (
-    <a
-      href="#"
-      className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 text-white transition hover:bg-white hover:text-[#24262b]"
-    >
-      {icon}
-    </a>
   );
 }
